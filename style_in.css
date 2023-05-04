@@ -1,0 +1,58 @@
+/* IMPORT DE FUENTES GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,900;1,400;1,900&family=Poly:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&display=swap');
+/* FONT FAMILY */
+/* 
+    font-family: 'Overlock', cursive;
+    font-family: 'M PLUS Rounded 1c', sans-serif; 
+*/
+
+/* 
+    Rojo:     #FF5656;
+    Blanco:   #EDF2F6;
+    Azul:     #6A7EFC;
+    Gris:     #494953;
+*/
+
+
+
+header {
+    background-color: #6A7EFC;
+    height: auto;
+}
+
+
+.nav-link {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #EDF2F6;
+}
+
+#Rayo {
+    font-family: 'Overlock', cursive;
+    font-weight: 900;
+    font-size: 22px;
+    color: #EDF2F6;
+    margin-left: 12px;
+}
+
+
+.ImgLogo {
+    margin-left: 5%;
+    width: 65px;
+    align-items: center;
+}
+
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* CARRUSEL */
+
+.carousel-indicators>button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 100%;
+}
