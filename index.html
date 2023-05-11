@@ -18,7 +18,8 @@
     <!-- ENCABEZADO BARRA NAVEGACION -->
 
     <header>
-        <nav class="navbar navbar-expand-lg" id="NavBarBarra">
+
+        <nav class="navbar navbar-expand-lg " id="NavBarBarra">
             <div class="container-fluid">
                 <img class="ImgLogo" src="./images/Logo.png" alt="Logo">
                 <a class="navbar-brand" href="#" id="Rayo">Rayo Mc' Queen</a>
@@ -26,8 +27,8 @@
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-lg p-4">
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto justify-content-center mt-3 mb-1 cp-4 gap-4 margen">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         </li>
@@ -41,13 +42,14 @@
                             <a class="nav-link" href="#">Contacto</a>
                         </li>
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <input class="form-control me-2 buscar-font" type="search" placeholder="Ingrese su busqueda..." aria-label="Search">
                             <button class="btn btn-outline-success bot-stl" type="submit">OK</button>
                         </form>
                     </ul>
                 </div>
             </div>
         </nav>
+
     </header>
 
     <!-- CARRUSEL -->
@@ -61,27 +63,33 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active c-item" data-bs-interval="3000">
-                <img src="./images/foto1.jpg" class="d-block w-100 c-img" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Cajas de cambio</h5>
-                    <p>Obtén el máximo rendimiento en la carretera con nuestra mecánica de cajas de cambio. Confía en nuestro equipo de expertos para un cambio
-                        de marcha sin problemas y una experiencia de conducción excepcional</p>
+                <img src="./images/Aston-Martin.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block tamaño-font">
+                    <h4>Cajas de cambio</h4>
+                    <p>Revisión y Mantenimiento a Caja de Cambio de un Emblemático “Aston Martin del 61”. Este trabajo incluyó la inspección y ajustes
+                        de las
+                        siguientes partes: RPM del motor – Interruptor neutral – Moduladores - Enlace del acelerador – Juntas en U – Soportes de
+                        transmisión –
+                        Controles electrónicos – Retención de líquidos.</p>
+                    <a href="./astonmartin.html" class="btn btn-primary">Ver más</a>
                 </div>
             </div>
             <div class="carousel-item c-item" data-bs-interval="3000">
-                <img src="./images/foto2.jpg" class="d-block w-100 c-img" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Suspensión y Dirección</h5>
-                    <p>Mecánica de primera para un rendimiento excepcional en la carretera. Confía en nosotros para obtener la mejor suspensión y dirección,
-                        garantizando una conducción suave y segura. Potencia tu viaje con nuestra experiencia mecánica completa</p>
+                <img src="./images/Porsche.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block tamaño-font">
+                    <h4>Suspensión y Dirección</h4>
+                    <p>Trabajo de Suspensión y Dirección "Porsche Carrera GT". Se instala un Kit de arbustos de suspensión Powerflex, además de un set
+                        de
+                        amortiguadores traseros deportivo Koni.</p>
                 </div>
             </div>
             <div class="carousel-item c-item" data-bs-interval="3000">
-                <img src="./images/foto4.jpg" class="d-block w-100 c-img #navbarSupportedContent" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Electróncia</h5>
-                    <p>Convierte tu vehículo en una máquina de precisión con nuestra experiencia en electrónica automotriz. Confía en nosotros para llevar tu
-                        conducción a un nivel superior con nuestra experiencia única en electrónica automotriz</p>
+                <img src="./images/Camaro1.jpg" class="d-block w-100 c-img #navbarSupportedContent" alt="...">
+                <div class="carousel-caption d-none d-md-block tamaño-font">
+                    <h4>Electrónica</h4>
+                    <p>Cambio de Ramal Eléctrico a un "Chevrolet Camaro SS". Se realiza el cambio de Ramal Cableado Interruptor - Relay - fusible Para
+                        Neblineros -
+                        Focos e Intermitentes.</p>
                 </div>
             </div>
         </div>
@@ -95,24 +103,42 @@
         </button>
     </div>
 
+    <!-- MECANICOS -->
 
-    <div class="slide-container">
-        <div class="slide-content">
-            <div class="card-wrapper">
+    <div class="container ">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+            <div class="col">
                 <div class="card">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="" alt="" class="card-img">
-                        </div>
+                    <img src="./images/mecanico1.jpg" class="card-img-top w-50" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la tarjeta</h5>
+                        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido
+                            adicional. Este contenido es un poco más largo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./images/mecanico2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la tarjeta</h5>
+                        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido
+                            adicional. Este contenido es un poco más largo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./images/mecanico3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la tarjeta</h5>
+                        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido
+                            adicional.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 
 
 
