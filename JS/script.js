@@ -3,8 +3,7 @@
 const checkbox = document.querySelector('.my-form input[type="checkbox"]');
 const btns = document.querySelectorAll(".my-form button");
 
-checkbox.addEventListener("change", function() 
-{
+checkbox.addEventListener("change", function () {
   const checked = this.checked;
   for (const btn of btns) {
     checked ? (btn.disabled = false) : (btn.disabled = true);
@@ -16,7 +15,7 @@ console.log(document.getElementById('correo').value);
 
 document.getElementById('myElement').innerHTML = document.getElementById('correo').value;
 
-function alertCookie(){
+function alertCookie() {
   console.log("Hola mundo");
 }
 
@@ -41,10 +40,10 @@ function alertCookie(){
 // });
 
 
-    // EVENTOS
+// EVENTOS
 
-    var x = document.cookie;
-    document.cookie = "username=René Veloso";
+var x = document.cookie;
+document.cookie = "username=René Veloso";
 
 
 
