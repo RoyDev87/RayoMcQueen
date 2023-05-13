@@ -15,14 +15,21 @@
 
 <body>
 
+    <!-- *************************** -->
     <!-- ENCABEZADO BARRA NAVEGACION -->
+    <!-- *************************** -->
 
     <header>
-        <div class="UserCon" id="UserCon">
-            <p>El usuario conectado es:  </p>
-        </div>
 
-        <nav class="navbar navbar-expand-lg" id="NavBarBarra">
+        <p>Usuario Conectado: </p>
+
+
+        <input type="text" id="correo">
+        <button onclick="document.getElementById('myElement').innerHTML = document.getElementById('correo').value;">Mostrar valor</button>
+        <div id="myElement"></div>
+
+
+        <nav class="navbar navbar-expand-lg " id="NavBarBarra">
             <div class="container-fluid">
                 <img class="ImgLogo" src="./images/Logo.png" alt="Logo">
                 <a class="navbar-brand" href="#" id="Rayo">Rayo Mc' Queen</a>
@@ -31,7 +38,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-lg p-4">
+                    <ul class="navbar-nav ms-auto justify-content-center mt-3 mb-1 cp-4 gap-4 margen">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         </li>
@@ -44,8 +51,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./Contacto.html">Contacto</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Login.html">Iniciar Sesión</a>
+                        </li>                        
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <input class="form-control me-2 buscar-font" type="search" placeholder="Ingrese su busqueda..." aria-label="Search">
                             <button class="btn btn-outline-success bot-stl" type="submit">OK</button>
                         </form>
                     </ul>
@@ -54,7 +64,9 @@
         </nav>
     </header>
 
+    <!-- ******** -->
     <!-- CARRUSEL -->
+    <!-- ******** -->
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -65,24 +77,35 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active c-item" data-bs-interval="3000">
-                <img src="./images/CajaCambio2.jpg" class="d-block w-100 c-img" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Revisión y Mantenimiento a Caja de Cambio de un Emblematico "Aston Martin del 61" </h5>
-                    <p>Este trabajo incluyo la inspección y ajustes de las siguientes partes: RPM del motor – Interruptor neutral – Moduladores – Enlace del acelerador – Juntas en U – Soportes de transmisión – Controles electrónicos – Retención de líquidos</p>
+                <img src="./images/Aston-Martin.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block tamaño-font">
+                    <h4>Cajas de cambio</h4>
+                    <p>Revisión y Mantenimiento a Caja de Cambio de un Emblemático “Aston Martin del 61”. Este trabajo incluyó la inspección y ajustes
+                        de las
+                        siguientes partes: RPM del motor – Interruptor neutral – Moduladores - Enlace del acelerador – Juntas en U – Soportes de
+                        transmisión –
+                        Controles electrónicos – Retención de líquidos.</p>
+                    <a href="./astonmartin.html" class="btn btn-primary bot-stl">Ver más</a>
                 </div>
             </div>
             <div class="carousel-item c-item" data-bs-interval="3000">
-                <img src="./images/Auto4.jpg" class="d-block w-100 c-img" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Trabajo de Suspensión y Dirección "PORSHE CARRERA GT" </h5>
-                    <p>Se instala un Kit de arbustos de suspensión Powerflex, además de un set de amortiguadores traseros deportivo Koni </p>
+                <img src="./images/Porsche.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption d-none d-md-block tamaño-font">
+                    <h4>Suspensión y Dirección</h4>
+                    <p>Trabajo de Suspensión y Dirección "Porsche Carrera GT". Se instala un Kit de arbustos de suspensión Powerflex, además de un set
+                        de
+                        amortiguadores traseros deportivo Koni.</p>
+                    <a href="./astonmartin.html" class="btn btn-primary bot-stl">Ver más</a>
                 </div>
             </div>
             <div class="carousel-item c-item" data-bs-interval="3000">
-                <img src="./images/auto3.jpg" class="d-block w-100 c-img #navbarSupportedContent" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Cambio de Ramal Electrico a un "Chevrolet Camaro"</h5>
-                    <p>Se realiza el cambio de Ramal Ramal Cableado Interruptor + Relay + fusible Para Neblineros, Focos e Intermitentes </p>
+                <img src="./images/Camaro1.jpg" class="d-block w-100 c-img #navbarSupportedContent" alt="...">
+                <div class="carousel-caption d-none d-md-block tamaño-font">
+                    <h4>Electrónica</h4>
+                    <p>Cambio de Ramal Eléctrico a un "Chevrolet Camaro SS". Se realiza el cambio de Ramal Cableado Interruptor - Relay - fusible Para
+                        Neblineros -
+                        Focos e Intermitentes.</p>
+                    <a href="./astonmartin.html" class="btn btn-primary bot-stl">Ver más</a>
                 </div>
             </div>
         </div>
@@ -96,24 +119,47 @@
         </button>
     </div>
 
+    <!-- ********* -->
+    <!-- MECANICOS -->
+    <!-- ********* -->
 
-    <div class="slide-container">
-        <div class="slide-content">
-            <div class="card-wrapper">
-                <div class="card">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="" alt="" class="card-img">
-                        </div>
+    <div class="container mt-5 mb-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+            <div class="col">
+                <div class="card card-mecanico">
+                    <img src="./images/mecanico1.jpg" class="card-img-top w-100 img-card img-mecanico" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la tarjeta</h5>
+                        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido
+                            adicional. Este contenido es un poco más largo.</p>
+                        <a href="./jorge_gonzalez.html" class="btn bot-stl bot-stl2">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-mecanico">
+                    <img src="./images/mecanico2.jpg" class="card-img-top w-100 img-card img-mecanico" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la tarjeta</h5>
+                        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido
+                            adicional. Este contenido es un poco más largo.</p>
+                        <a href="./claudio_narea.html" class="btn bot-stl bot-stl2">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-mecanico">
+                    <img src="./images/mecanico4.jpg" class="card-img-top w-100 img-card img-mecanico" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la tarjeta</h5>
+                        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido
+                            adicional. Este contenido es un poco más largo.</p>
+                        <a href="./miguel_tapia.html" class="btn bot-stl bot-stl2">Más Información</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 
 
 
