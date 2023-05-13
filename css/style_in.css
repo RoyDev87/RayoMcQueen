@@ -14,14 +14,6 @@
     Gris:     #494953;
 */
 
-/* 
-    font-weight: 300 !important;
-    font-size: 22px !important;
-
-    font-weight: 700 !important;
-    font-size: 30px !important;
-*/
-
 
 * {
     margin: 0;
@@ -33,6 +25,10 @@
 body {
     background: #dde2e6;
 }
+
+
+/**************** BARRA DE NAVEGACIÓN ***************/
+
 
 header {
     background-color: #3a83f0;
@@ -102,15 +98,17 @@ header {
 
 .bot-stl:hover {
     background-color: #ffffff;
-    border: 3px solid #ff1a1a;
+    box-shadow: 0px 0px 0px 3px #ff1a1a inset;
+    /*border: 3px solid #ff1a1a inset;*/
     color: #ff1a1a;
 }
 
 .bot-stl:active {
     background-color: #3a83f0 !important;
     border: none;
-    box-shadow: 5px 5px 10px rgba(36, 36, 36, 0.445);
+    box-shadow: none;
     transition: 30ms;
+    color: #fff !important;
 }
 
 
@@ -124,6 +122,8 @@ header {
     height: 12px !important;
     border-radius: 100%;
 }
+
+/********************* MEDIA QUERIES ***********************/
 
 @media (max-width:768px) {
     .carousel-item {
@@ -140,7 +140,7 @@ header {
 }
 
 .c-item {
-    height: 700px;
+    height: 500px;
 }
 
 .c-img {
@@ -200,4 +200,23 @@ header {
 
 .bot-stl2 {
     display: block;
+}
+
+
+/************************* FOOTER ***************************/
+
+
+
+.cen-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* position: relative; */
+    height: 150px;
+    background-color: #3a83f0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18PX;
+    text-align: center;
+    padding-top: 12px;
 }
