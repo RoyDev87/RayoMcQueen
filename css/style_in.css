@@ -203,6 +203,35 @@ header {
 }
 
 
+
+/********************** BOTON VOLVER ARRIB ***********************/
+
+
+.boton {
+    width: 45px;
+    height: 45px;
+    background: #ff1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: all 350ms ease;
+}
+
+.boton:hover {
+    transform: scale(1.3);
+    border-color: rgba(105, 89, 89, 0.075);
+}
+
+
+
 /************************* FOOTER ***************************/
 
 

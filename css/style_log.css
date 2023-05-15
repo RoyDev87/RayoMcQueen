@@ -83,15 +83,17 @@ header {
 
 .bot-stl:hover {
     background-color: #ffffff;
-    border: 3px solid #ff1a1a;
+    box-shadow: 0px 0px 0px 3px #ff1a1a inset;
+    /*border: 3px solid #ff1a1a inset;*/
     color: #ff1a1a;
 }
 
 .bot-stl:active {
     background-color: #3a83f0 !important;
     border: none;
-    box-shadow: 5px 5px 10px rgba(36, 36, 36, 0.445);
+    box-shadow: none;
     transition: 30ms;
+    color: #fff !important;
 }
 
 
