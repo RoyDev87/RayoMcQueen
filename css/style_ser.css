@@ -131,7 +131,6 @@ header {
         height: 300px !important;
         width: 300px !important;
         object-fit: cover;
-        /* background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important; */
     }
 
     .titulo hr {

@@ -13,6 +13,14 @@
 /**************** BARRA DE NAVEGACIÓN ***************/
 
 
+.fondo-login {
+    background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
 
 header {
     background-color: #3a83f0;
@@ -96,43 +104,115 @@ header {
     color: #fff !important;
 }
 
+.bot-stl:hover {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 3px #ff1a1a inset;
+    /*border: 3px solid #ff1a1a inset;*/
+    color: #ff1a1a;
+}
+
+.bot-stl:active {
+    background-color: #3a83f0 !important;
+    border: none;
+    box-shadow: none;
+    transition: 30ms;
+    color: #fff !important;
+}
+
 
 
 /*********************** CONTENIDO *************************/
 
-
-.fondo-login {
-    background-image: url("./images/Auto-Fondo.jpg");
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff !important;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-.form-log {
-    margin-top: 10%;
-    margin-bottom: 15%;
+.form_titulo {
+    text-align: center;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 6%;
+    text-transform: uppercase;
 }
 
-.entrada {
-    align-items: center;
+.contenedor_form {
+    width: 100%;
+    display: grid;
+    gap: 0.5em;
+    grid-auto-columns: 100%;
 }
 
-.btn-entrada {
-    align-items: center;
+.form_input {
+    width: 100%;
+    font-family: inherit;
+    padding: 3px 3px;
+    outline: none;
+    border: none;
+    border: 2px solid #3a83f0;
+    border-radius: 5px;
 }
 
-/************************* FOOTER ***************************/
+.form_cta {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 22px;
+    background-color: #ff1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 3px;
+    cursor: pointer;
+    margin: 2%;
+    margin-left: 0;
+}
 
+.form_input--message {
+    resize: none;
+    padding: 5px 5px;
+}
+
+.invalid {
+    border: solid 1px #ff1a1a;
+    box-shadow: 0 0 8px #ff1a1a;
+}
+
+.error {
+    color: #ff1a1a;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+/******************* FOOTER *******************/
 
 
 .cen-footer {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     height: 150px;
     background-color: #3a83f0;
     color: #fff;
     font-weight: 300;
-    font-size: 18PX;
+    font-size: 18px;
     text-align: center;
-    padding-top: 12px;
-    bottom: 0;
-    position: fixed;
+}
+
+.cen-footer p {
+    margin: 0;
 }
