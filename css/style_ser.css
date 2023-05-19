@@ -10,7 +10,11 @@
 
 }
 
-
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
 /**************** BARRA DE NAVEGACIÓN ***************/
 
@@ -108,19 +112,81 @@ header {
     border-radius: 100%;
 }
 
-/********************* MEDIA QUERIES ***********************/
+/************************* MEDIA QUERIES ********************/
 
-@media (max-width:768px) {
-    .carousel-item {
-        height: 300px !important;
-        object-fit: cover;
-    }
-}
 
 @media (max-width:992px) {
     .carousel-item {
         height: 400px !important;
         object-fit: cover;
+    }
+
+    header {
+        background-color: #3a83f0;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .titulo img {
+        height: 300px !important;
+        width: 300px !important;
+        object-fit: cover;
+        /* background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important; */
+    }
+
+    .titulo hr {
+        width: 280px;
+        height: 2px;
+        margin: auto;
+        border: none;
+        border-radius: 2px;
+        background-color: #ff1a1a;
+        opacity: 100%;
+    }
+
+    .ImgLogo {
+        margin-left: 2%;
+        width: 45px;
+        align-items: center;
+    }
+
+    #Rayo {
+        display: none;
+    }
+
+    .tag-seccion {
+        margin-bottom: 8%;
+        flex-direction: column;
+        text-align: center;
+        top: 0px;
+        left: 0;
+        top: 0;
+    }
+
+    section {
+        display: flex;
+        height: auto;
+    }
+
+
+    section .imagen-galeria {
+        width: 90%;
+        height: 250px;
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid #fff;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    section .imagen-galeria:hover {
+        cursor: none;
+        filter: none;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #fff;
     }
 }
 
@@ -172,11 +238,12 @@ header {
 section {
     display: flex;
     width: 1200px;
-    height: 400px;
+
 }
 
 section img {
     width: 0px;
+    height: 400px;
     flex-grow: 1;
     object-fit: cover;
     filter: brightness(0.3);
@@ -229,14 +296,19 @@ section img:hover {
 
 .cen-footer {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* position: relative; */
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
     height: 150px;
     background-color: #3a83f0;
     color: #fff;
     font-weight: 300;
-    font-size: 18PX;
+    font-size: 18px;
     text-align: center;
-    padding-top: 12px;
+}
+
+.cen-footer p {
+    margin: 0;
 }

@@ -125,19 +125,48 @@ header {
 
 /********************* MEDIA QUERIES ***********************/
 
-@media (max-width:768px) {
-    .carousel-item {
-        height: 300px !important;
-        object-fit: cover;
-    }
-}
 
 @media (max-width:992px) {
+
     .carousel-item {
         height: 400px !important;
         object-fit: cover;
     }
+
+    header {
+        background-color: #3a83f0;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .titulo img {
+        height: 300px !important;
+        width: 300px !important;
+        object-fit: cover;
+        background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
+    }
+
+    .titulo hr {
+        width: 280px;
+        height: 2px;
+        margin: auto;
+        border: none;
+        border-radius: 2px;
+        background-color: #ff1a1a;
+        opacity: 100%;
+    }
+
+    .ImgLogo {
+        margin-left: 2%;
+        width: 45px;
+        align-items: center;
+    }
+
+    #Rayo {
+        display: none;
+    }
 }
+
 
 .c-item {
     height: 500px;
@@ -240,7 +269,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* position: relative; */
+    position: relative;
     height: 150px;
     background-color: #3a83f0;
     color: #fff;

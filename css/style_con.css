@@ -7,9 +7,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    color: black;
 }
 
+.body-fondo {
+    background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 
 /**************** BARRA DE NAVEGACIÓN ***************/
@@ -25,12 +30,15 @@ header {
     margin-right: 5%;
 }
 
+.d-flex {
+    align-items: center;
+}
+
 .buscar-font {
     font-family: 'M PLUS Rounded 1c', sans-serif !important;
     font-weight: 300;
     font-size: 18px;
     max-height: 40px;
-    margin-top: 6px;
 
 }
 
@@ -41,7 +49,7 @@ header {
     color: #ffffff;
     display: inline-block;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .nav-link:hover {
@@ -73,13 +81,13 @@ header {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 700;
     font-size: 18px;
-    margin-top: 6px !important;
     background-color: #ff1a1a;
     border: none;
     cursor: pointer;
     text-decoration: none;
     color: #ffffff;
     height: 40px;
+    align-items: center;
 }
 
 .bot-stl:hover {
@@ -97,61 +105,140 @@ header {
     color: #fff !important;
 }
 
+/************* MEDIA QUERIES ************/
+
+@media (max-width:992px) {
+
+    header {
+        background-color: #3a83f0;
+        height: auto;
+        text-align: center;
+        padding-top: 2.2%;
+        padding-bottom: 2.2%;
+    }
+
+    #Rayo {
+        display: none;
+    }
+
+    .ImgLogo {
+        margin-left: 2%;
+        width: 45px;
+        align-items: center;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff !important;
+        margin: auto;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 1em;
+        padding: 3.5em 1.5em;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+}
+
 
 /******************* CONTENIDO ******************/
 
-
-.my-form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-49%, -49%);
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff !important;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-.ali_text h1 {
+.form_titulo {
     text-align: center;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 6%;
+    text-transform: uppercase;
 }
 
-.ali_text {
-    margin-bottom: 20%;
+.contenedor_form {
+    width: 100%;
+    display: grid;
+    gap: 0.5em;
+    grid-auto-columns: 100%;
 }
 
-.formulario1 {
-    margin-bottom: 10px;
+.form_input {
+    width: 100%;
+    font-family: inherit;
+    padding: 3px 3px;
+    outline: none;
+    border: none;
+    border: 2px solid #3a83f0;
+    border-radius: 5px;
 }
 
-.formulario2 {
-    margin-bottom: 10px;
+.form_cta {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
+    background-color: #ff1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 3px;
+    cursor: pointer;
+
 }
 
-.formulario3 {
-    margin-bottom: 10px;
+.form_input--message {
+    resize: none;
+    padding: 5px 5px;
 }
 
-.formulario4 {
-    margin-bottom: 10px;
+.invalid {
+    border: solid 1px #ff1a1a;
+    box-shadow: 0 0 8px #ff1a1a;
 }
 
-.formulario5 {
-    margin-bottom: 10px;
+.error {
+    color: #ff1a1a;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
 }
-
-
 
 /******************* FOOTER *******************/
 
 
 .cen-footer {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
     height: 150px;
     background-color: #3a83f0;
     color: #fff;
     font-weight: 300;
-    font-size: 18PX;
+    font-size: 18px;
     text-align: center;
-    padding-top: 12px;
-    bottom: 0;
-    position: fixed;
+    align-items: center;
+    margin-top: auto;
+    clear: both;
+}
+
+
+
+.cen-footer p {
+    margin-top: 4.5%;
 }

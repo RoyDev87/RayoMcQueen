@@ -105,7 +105,7 @@ header {
 
 
 .fondo_mecanico {
-    background: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
+    background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
 }
 
 .todo-text {
@@ -207,21 +207,43 @@ header {
 /************************* MEDIA QUERIES ********************/
 
 
-@media (max-width:320px) {
+@media (max-width:992px) {
+
+    header {
+        background-color: #3a83f0;
+        height: auto;
+        padding: 10px 0;
+    }
+
     .titulo img {
-        height: 200px !important;
-        width: 200px !important;
+        height: 300px !important;
+        width: 300px !important;
         object-fit: cover;
+        background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
+    }
+
+    .titulo hr {
+        width: 280px;
+        height: 2px;
+        margin: auto;
+        border: none;
+        border-radius: 2px;
+        background-color: #ff1a1a;
+        opacity: 100%;
+    }
+
+    .ImgLogo {
+        margin-left: 2%;
+        width: 45px;
+        align-items: center;
+    }
+
+    #Rayo {
+        display: none;
     }
 }
 
-@media (max-width:992px) {
-    .titulo img {
-        height: 400px !important;
-        width: 400px !important;
-        object-fit: cover;
-    }
-}
+
 
 
 
@@ -261,7 +283,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* position: relative; */
+    position: relative;
     height: 150px;
     background-color: #3a83f0;
     color: #fff;
