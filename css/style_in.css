@@ -4,7 +4,7 @@
 /* FONT FAMILY */
 /*
     font-family: 'Overlock', cursive;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif; 
 */
 
 /*
@@ -12,14 +12,6 @@
     Blanco:   #EDF2F6;
     Azul:     #3a83f0;
     Gris:     #494953;
-*/
-
-/* 
-    font-weight: 300 !important;
-    font-size: 22px !important;
-
-    font-weight: 700 !important;
-    font-size: 30px !important;
 */
 
 
@@ -33,6 +25,10 @@
 body {
     background: #dde2e6;
 }
+
+
+/**************** BARRA DE NAVEGACIÓN ***************/
+
 
 header {
     background-color: #3a83f0;
@@ -102,15 +98,17 @@ header {
 
 .bot-stl:hover {
     background-color: #ffffff;
-    border: 3px solid #ff1a1a;
+    box-shadow: 0px 0px 0px 3px #ff1a1a inset;
+    /*border: 3px solid #ff1a1a inset;*/
     color: #ff1a1a;
 }
 
 .bot-stl:active {
     background-color: #3a83f0 !important;
     border: none;
-    box-shadow: 5px 5px 10px rgba(36, 36, 36, 0.445);
+    box-shadow: none;
     transition: 30ms;
+    color: #fff !important;
 }
 
 
@@ -125,22 +123,53 @@ header {
     border-radius: 100%;
 }
 
-@media (max-width:768px) {
-    .carousel-item {
-        height: 300px !important;
-        object-fit: cover;
-    }
-}
+/********************* MEDIA QUERIES ***********************/
+
 
 @media (max-width:992px) {
+
     .carousel-item {
         height: 400px !important;
         object-fit: cover;
     }
+
+    header {
+        background-color: #3a83f0;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .titulo img {
+        height: 300px !important;
+        width: 300px !important;
+        object-fit: cover;
+        background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
+    }
+
+    .titulo hr {
+        width: 280px;
+        height: 2px;
+        margin: auto;
+        border: none;
+        border-radius: 2px;
+        background-color: #ff1a1a;
+        opacity: 100%;
+    }
+
+    .ImgLogo {
+        margin-left: 2%;
+        width: 45px;
+        align-items: center;
+    }
+
+    #Rayo {
+        display: none;
+    }
 }
 
+
 .c-item {
-    height: 700px;
+    height: 500px;
 }
 
 .c-img {
@@ -202,294 +231,50 @@ header {
     display: block;
 }
 
-/* CONTACTO */
 
 
-  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+/********************** BOTON VOLVER ARRIB ***********************/
 
 
-:root {
-  --white: #afafaf;
-  --red: #e31b23;
-  --bodyColor: #292a2b;
-  --borderFormEls: hsl(0, 0%, 10%);
-  --bgFormEls: hsl(0, 0%, 14%);
-  --bgFormElsFocus: hsl(0, 7%, 20%);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  outline: none;
-}
-
-a {
-  color: inherit;
-}
-
-input,
-select,
-textarea,
-button {
-  font-family: inherit;
-  font-size: 100%;
-}
-
-button,
-label {
-  cursor: pointer;
-}
-
-select {
-  appearance: none;
-}
-
-/* Eliminar flecha nativa en IE */
-select::-ms-expand {
-  display: none;
-}
-
-/*Eliminar contorno punteado de la opción seleccionada en Firefox*/
-/*https://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff/18853002#18853002*/
-/*We use !important to override the color set for the select on line 99*/
-select:-moz-focusring {
-  color: transparent !important;
-  text-shadow: 0 0 0 var(--white);
-}
-
-textarea {
-  resize: none;
-}
-
-ul {
-  list-style: none;
-}
-
-body {
-  font: 18px/1.5 "Open Sans", sans-serif;
-  background: var(--bodyColor);
-  color: var(--white);
-  margin: 1.5rem 0;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-
-/* ELEMENTOS DE FORMULARIO
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.my-form h1 {
-  margin-bottom: 1.5rem;
-}
-
-.my-form li,
-.my-form .grid > *:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-.my-form select,
-.my-form input,
-.my-form textarea,
-.my-form button {
-  width: 100%;
-  line-height: 1.5;
-  padding: 15px 10px;
-  border: 1px solid var(--borderFormEls);
-  color: var(--white);
-  background: var(--bgFormEls);
-  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
-    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-}
-
-.my-form textarea {
-  height: 170px;
-}
-
-.my-form ::placeholder {
-  color: inherit;
-  /*Fix opacity issue on Firefox*/
-  opacity: 1;
-}
-
-.my-form select:focus,
-.my-form input:focus,
-.my-form textarea:focus,
-.my-form button:enabled:hover,
-.my-form button:focus,
-.my-form input[type="checkbox"]:focus + label {
-  background: var(--bgFormElsFocus);
-}
-
-.my-form select:focus,
-.my-form input:focus,
-.my-form textarea:focus {
-  transform: scale(1.02);
-}
-
-.my-form *:required,
-.my-form select {
-  background-repeat: no-repeat;
-  background-position: center right 12px;
-  background-size: 15px 15px;
-}
-
-.my-form *:required {
-  background-image: url(/images/asterisco.svg)
-  /* background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg);   */
-}
-
-.my-form select {
-  background-image: url(/images/down.svg)
-  /* background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg); */
-}
-
-.my-form *:disabled {
-  cursor: default;
-  filter: blur(2px);
-}
-
-
-/* FORM BTNS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.my-form .required-msg {
-  display: none;
-  background: url(/images/asterisco.svg)
-  /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg) */
-    no-repeat center left / 15px 15px;
-  padding-left: 20px;
-}
-
-.my-form .btn-grid {
-  position: relative;
-  overflow: hidden;
-  transition: filter 0.2s;
-}
-
-.my-form button {
-  font-weight: bold;
-}
-
-.my-form button > * {
-  display: inline-block;
-  width: 100%;
-  transition: transform 0.4s ease-in-out;
-}
-
-.my-form button .back {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-110%, -50%);
-}
-
-.my-form button:enabled:hover .back,
-.my-form button:focus .back {
-  transform: translate(-50%, -50%);
-}
-
-.my-form button:enabled:hover .front,
-.my-form button:focus .front {
-  transform: translateX(110%);
-}
-
-
-  /*VARIABLES PERSONALIZADAS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.my-form input[type="checkbox"] {
-  position: absolute;
-  left: -9999px;
-}
-
-
-.my-form input[type="checkbox"] + label {
-  position: relative;
-  display: inline-block;
-  padding-left: 2rem;
-  transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-}
-
-.my-form input[type="checkbox"] + label::before,
-.my-form input[type="checkbox"] + label::after {
-  content: '';
-  position: absolute;
-}
-
-.my-form input[type="checkbox"] + label::before {
-  left: 0;
-  top: 6px;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--white);
-}
-
-.my-form input[type="checkbox"]:checked + label::before {
-  background: var(--red);
-}
-
-.my-form input[type="checkbox"]:checked + label::after {
-  left: 7px;
-  top: 7px;
-  width: 6px;
-  height: 14px;
-  border-bottom: 2px solid var(--white);
-  border-right: 2px solid var(--white);
-  transform: rotate(45deg);
-}
-
-
-/* FOOTER
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-footer {
-  font-size: 1rem;
-  text-align: right;
-  backface-visibility: hidden;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-footer span {
-  color: var(--red);
-}
-
-
-/* MQ
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (min-width: 600px) {
-  .my-form .grid {
-    display: grid;
-    grid-gap: 1.5rem;
-  }
-
-  .my-form .grid-2 {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .my-form .grid-3 {
-    grid-template-columns: auto auto auto;
+.boton {
+    width: 45px;
+    height: 45px;
+    background: #ff1a1a;
+    display: flex;
+    justify-content: center;
     align-items: center;
-  }
-
-  .my-form .grid > *:not(:last-child) {
-    margin-bottom: 0;
-  }
-
-  .my-form .required-msg {
-    display: block;
-  }
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: all 350ms ease;
 }
 
-@media screen and (min-width: 541px) {
-  .my-form input[type="checkbox"] + label::before {
-    top: 50%;
-    transform: translateY(-50%);
-  }
+.boton:hover {
+    transform: scale(1.3);
+    border-color: rgba(105, 89, 89, 0.075);
+}
 
-  .my-form input[type="checkbox"]:checked + label::after {
-    top: 3px;
-  }
+
+
+/************************* FOOTER ***************************/
+
+
+
+.cen-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 150px;
+    background-color: #3a83f0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18PX;
+    text-align: center;
+    padding-top: 12px;
+}

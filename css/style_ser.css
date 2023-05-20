@@ -7,11 +7,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
 /**************** BARRA DE NAVEGACIÓN ***************/
-
 
 
 header {
@@ -97,117 +102,24 @@ header {
 }
 
 
-
-
-/****************ESTILO MECANICO *********************/
-
+/*****************CARRUSEL********************/
 
 
 
-.fondo_mecanico {
-    background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
+.carousel-indicators>button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 100%;
 }
-
-.todo-text {
-    margin-top: 5%;
-    color: white;
-}
-
-.titulo h1 {
-    font-weight: 700;
-    text-align: center;
-}
-
-.titulo hr {
-    width: 450px;
-    height: 3px;
-    margin: auto;
-    border: none;
-    border-radius: 2px;
-    background-color: #ff1a1a;
-    opacity: 100%;
-}
-
-.titulo h3 {
-    font-weight: 400;
-    text-align: center;
-    margin-top: 3px;
-}
-
-.titulo img {
-    max-width: 450px;
-    max-height: 450px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top: 3% !important;
-    display: block;
-    margin: auto;
-    border: 5px solid white;
-    background-color: #3a83f0;
-    padding: 5px;
-}
-
-.titulo img:hover {
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    transform: scale(1.1);
-    transition: 0.5s
-}
-
-.datos {
-    margin-top: 8%;
-}
-
-.datos h4 {
-    font-weight: 500;
-    margin-top: 3px;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.datos p {
-    font-weight: 300;
-    font-size: 18px;
-    margin-top: 3px;
-    margin-left: 12%;
-    margin-right: 10%;
-    text-align: justify;
-}
-
-.resumen h4 {
-    font-weight: 500;
-    margin-top: 3px;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.resumen p {
-    font-weight: 300;
-    font-size: 18px;
-    margin-top: 3px;
-    margin-left: 12%;
-    margin-right: 10%;
-    text-align: justify;
-}
-
-.resumen li {
-    font-weight: 300;
-    font-size: 18px;
-    margin-top: 3px;
-    margin-left: 12%;
-    margin-right: 10%;
-    text-align: justify;
-}
-
-.separacion {
-    margin-bottom: 15%;
-}
-
-
 
 /************************* MEDIA QUERIES ********************/
 
 
 @media (max-width:992px) {
+    .carousel-item {
+        height: 400px !important;
+        object-fit: cover;
+    }
 
     header {
         background-color: #3a83f0;
@@ -219,7 +131,6 @@ header {
         height: 300px !important;
         width: 300px !important;
         object-fit: cover;
-        background-image: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
     }
 
     .titulo hr {
@@ -241,9 +152,119 @@ header {
     #Rayo {
         display: none;
     }
+
+    .tag-seccion {
+        /* width: 90%;
+        height: 250px;
+        border-radius: 10px;
+        margin: auto; */
+
+        margin-bottom: 8%;
+        flex-direction: column;
+        text-align: center;
+        top: 0px;
+        left: 0;
+        top: 0;
+    }
+
+    section {
+        display: flex;
+        height: auto;
+    }
+
+
+    section .imagen-galeria {
+        width: 90%;
+        height: 250px;
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid #fff;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    section .imagen-galeria:hover {
+        cursor: none;
+        filter: none;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #fff;
+    }
+}
+
+.c-item {
+    height: 500px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.btn {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.tamaño-font h4 {
+    font-weight: 700 !important;
+    font-size: 30px !important;
+}
+
+.tamaño-font p {
+    font-weight: 300 !important;
+    font-size: 22px !important;
 }
 
 
+/***************** CONTENIDO ******************/
+
+
+.fondo_servicio {
+    background: linear-gradient(to bottom right, #3a83f0, #ff1a1a) !important;
+}
+
+.tag-div {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+}
+
+.tag-seccion {
+    margin-bottom: 8%;
+}
+
+section {
+    display: flex;
+    width: 800px;
+
+}
+
+section img {
+    width: 0px;
+    height: 400px;
+    flex-grow: 1;
+    object-fit: cover;
+    filter: brightness(0.3);
+    filter: saturate(30%);
+    transition: 0.5s ease;
+    border-radius: 10px;
+    border: 2px solid #fff;
+
+}
+
+section img:hover {
+    cursor: pointer;
+    filter: brightness(1);
+    width: 600px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
 
 
 
@@ -274,21 +295,24 @@ header {
 }
 
 
-
-/************************* FOOTER ***************************/
-
+/******************* FOOTER *******************/
 
 
 .cen-footer {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
+    left: 0;
+    bottom: 0;
     height: 150px;
     background-color: #3a83f0;
     color: #fff;
     font-weight: 300;
-    font-size: 26;
+    font-size: 18px;
     text-align: center;
-    padding-top: 12px;
+}
+
+.cen-footer p {
+    margin: 0;
 }
